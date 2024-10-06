@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Restaurant</title>
+  </head>
+  <body>
+<div class="Restaurant">
+    <a href="#">Home</a>
+    <a href="#">Login</a>
+    <a href="#">Place order</a>
+</div>
+<section>
+    <img src="\pacake.jpeg" class="M">
+    <img src="\pizza.jpeg" class="M">
+    <img src="\ice-cream.jpeg" class="M">
+</section>
+<script>
+var myIndex=0
+function carousel(){
+var i;
+var x=document.getElementsByClassName("M");
+
+for (i=0; i<x.length; i++){
+    x[i].style.display="none";
+}
+
+myIndex++;
+if(myIndex > x.length){
+    index=1;
+}
+
+x[myIndex - 1].style.display="block";
+
+setTimeout(carousel,2000);
+}
+carousel();
+</script>
+  </body>
+</html>
